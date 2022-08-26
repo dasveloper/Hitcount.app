@@ -4,8 +4,8 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 
 export default function Home() {
   const [copied, setCopied] = useState(false);
-  const code = `<a href="hitcount.app" target="_blank">
-  <img src="hitcount.app/YOUR_SITE_HERE" alt="Hitcounter" />
+  const code = `<a href="https://hitcount.app" target="_blank">
+  <img src="https://hitcount.app/YOUR_SITE_HERE" alt="Hitcounter" />
 </a>`;
 
   return (
@@ -22,7 +22,7 @@ export default function Home() {
         <img
           className="mx-auto mt-4 max-w-[50%]"
           width={380}
-          src="/hitcount.com"
+          src="https://hitcount.app/hitcount.app"
         />
         <p className="mt-2 text-xs sm:text-sm text-gray-500">
           Adding a hitcounter to your website is as simple as adding an image.
@@ -33,9 +33,9 @@ export default function Home() {
         <div className="text-sm mx-auto w-full max-w-xl overflow-auto rounded-lg bg-black py-4 px-6 text-left font-medium text-white shadow-lg">
           <pre>
             <code>
-              <span className="opacity-50">{`<a href="hitcount.app" target="_blank">`}</span>
+              <span className="opacity-50">{`<a href="https://hitcount.app" target="_blank">`}</span>
               <br />
-              <span className="opacity-50">{`  <img src="hitcount.app/`}</span>
+              <span className="opacity-50">{`  <img src="https://hitcount.app/`}</span>
               <span className="rounded-sm bg-red-500 px-1.5 py-0.5 font-semibold text-white">
                 yourwebsite.com
               </span>
