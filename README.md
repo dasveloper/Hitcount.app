@@ -29,6 +29,12 @@ Go to the [Upstash Console](https://console.upstash.com/) and create a new datab
 - `UPSTASH_REDIS_REST_URL`: Find the URL in the database details page in the REST API section.
 - `UPSTASH_REDIS_REST_TOKEN`: Find the URL in the database details page in the REST API section.
 
+> :warning: Because of an issue with Node canvas on Vercel you must add this environment variable only on Vercel, not locally
+
+- `LD_LIBRARY_PATH`: /var/task/node_modules/canvas/build/Release:$LD_LIBRARY_PATH
+
+> This is also why we need the custom `vercel-build` step in package.json. See: [https://github.com/jeetiss/vercel-canvas](https://github.com/jeetiss/vercel-canvas)
+
 ## `4` Run the project
 
 Start your local dev server
@@ -36,7 +42,3 @@ Start your local dev server
 ```bash
 yarn dev
 ```
-
-**Note:** Because of an issue with Node canvas on Vercel I've added this vercel-build step as a temporary solution.
-
-"vercel-build": "yum install libuuid-devel libmount-devel && cp /lib64/{libuuid,libmount,libblkid}.so.1 node_modules/canvas/build/Release/ && next build"
