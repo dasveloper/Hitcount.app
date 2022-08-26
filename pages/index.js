@@ -46,7 +46,7 @@ export default function Home() {
           </pre>
         </div>
         <p className="mt-2 text-xs text-gray-500">
-          (The anchor tag isn&apos;t mandatory but helps support the site!)
+          (The anchor tag isn&apos;t required but helps support the site!)
         </p>
         <CopyToClipboard text={code} onCopy={() => setCopied(true)}>
           <button
