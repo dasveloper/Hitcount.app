@@ -24,15 +24,12 @@ export default async function handler(req, res) {
       background: hexBackground,
     });
 
-    // Create the image buffer
-    const img = Buffer.from(imgData, "base64");
-
     // Send the image
     res.writeHead(200, {
       "Content-Type": "image/svg+xml",
-      "Content-Length": img.length,
+      "Content-Length": imgData.length,
     });
-    return res.end(img);
+    return res.end(imgData);
   } catch (error) {
     console.log(error);
     res.status(500).send("Could not create error");
